@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+    margin: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.screen {
+    width: 175px;
+    font-size: 20px;
+    font-weight: bold;
+    border-style: none;
+    border-color: black;
+    background-color: black;
+    color: white;
+}
+
+.calculator {
+    width: 200px;
+    height: 300px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 3px;
+    border: none; 
+    border-radius: 100px;
+}
+
+#history-list {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    list-style-type: none;
+}
+
+#history-list li {
+    color: white; 
+    list-style-type: none;
+} 
+
+.btn-darkgrey {
+    background-color: rgb(53, 53, 53);
+    color: white; 
+}
+
+.btn-orange {
+    background-color: orange;
+    color: white;
+}
+
+.btn-lightgrey {
+    background-color: lightgrey;
+    color: white;
+}
+
