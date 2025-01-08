@@ -35,12 +35,32 @@ button {
     font-weight: bold;
     color: white;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 #history-list li {
     color: white; 
     list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
 } 
+
+#history-list span {
+    flex-grow: 1;
+}
+
+#history-list button {
+    font-size: 14px;
+    margin-left: 10px;
+    color: red;
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+}
 
 .btn-darkgrey {
     background-color: rgb(53, 53, 53);

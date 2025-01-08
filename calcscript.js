@@ -9,12 +9,30 @@
 
     function updHistory() {
         historylist.innerHTML = '';
-        history.forEach(function(item) {
-            let listitem = document.createElement('li'); 
-            listitem.textContent = item; 
-            historylist.appendChild(listitem); 
+        history.forEach(function(item, index) {
+            let listItem = document.createElement('li'); 
+    
+            let textSpan = document.createElement('span');
+            textSpan.textContent = item;
+            listItem.appendChild(textSpan);
+
+            let deleteBtn = document.createElement('button');
+            deleteBtn.textContent = 'X';
+            deleteBtn.style.marginLeft = '10px';
+            deleteBtn.style.color = 'red';
+            deleteBtn.style.background = 'none';
+            deleteBtn.style.border = 'none';
+            deleteBtn.style.cursor = 'pointer';
+            
+            deleteBtn.addEventListener('click', function() {
+                history.splice(index, 1);
+                updHistory();
+            });
+
+            listItem.appendChild(deleteBtn);
+            historylist.appendChild(listItem); 
         }); 
-    }; 
+    }
 
     buttons.forEach(function(button) {
         button.addEventListener('click', function(e) {
